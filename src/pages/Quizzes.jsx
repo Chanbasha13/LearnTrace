@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   Brain,
   Plus,
   Play,
-  Award,
-  Calendar,
   FileText,
-  Clock,
   Sparkles,
 } from 'lucide-react';
 import Button from '../components/ui/Button';

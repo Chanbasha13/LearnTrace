@@ -50,7 +50,7 @@ export default function DocumentDetail() {
         const res = await documentService.getDocument(id);
         const data = res.document || res.data || res;
         if (mounted) setDoc(data);
-      } catch (err) {
+      } catch {
         addToast('Document not found or could not be loaded', 'error');
         navigate('/app/documents');
       } finally {
@@ -81,7 +81,7 @@ export default function DocumentDetail() {
       } else {
         navigate('/app/quizzes');
       }
-    } catch (err) {
+    } catch {
       addToast('Failed to generate quiz. Try again later.', 'error');
     } finally {
       setGeneratingQuiz(false);
@@ -94,7 +94,7 @@ export default function DocumentDetail() {
       await documentService.deleteDocument(id);
       addToast('Document deleted successfully', 'success');
       navigate('/app/documents');
-    } catch (err) {
+    } catch {
       addToast('Failed to delete document', 'error');
       setDeleteLoading(false);
     }

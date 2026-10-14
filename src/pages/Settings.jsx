@@ -5,7 +5,6 @@ import {
   Shield,
   Trash2,
   LogOut,
-  CheckCircle,
   FileText,
   MessageSquare,
   Brain,
